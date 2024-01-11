@@ -13,10 +13,6 @@ const ProductList = () => {
     dispatch(listProducts());
   }, [dispatch]);
 
-  data.forEach((product) => {
-    console.log(product);
-  });
-
   return (
     <div className="home-product-container">
       <>
@@ -24,7 +20,7 @@ const ProductList = () => {
         <div className="product-container">
           {data.map((product) => {
             return (
-              <Product key={product._id} product={product} />
+              <Product key={product.id} product={product} />
             );
           })
           }

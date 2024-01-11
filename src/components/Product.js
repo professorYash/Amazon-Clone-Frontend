@@ -4,7 +4,6 @@ import "../styles/Product.css"
 import { Link } from 'react-router-dom'
 
 const Product = ({product}) => {
-
     return (
         <Link to={`/products/product/${product.id}`}>
         <div className="product-card" >

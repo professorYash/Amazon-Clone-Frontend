@@ -5,12 +5,10 @@ import "../styles/ProductPage.css";
 import { data } from '../data/data';
 
 const ProductPage = (props) => {
-
   const [qty, setQty] = useState(1);
   const productID = props.match.params.id;
 
-  const product = data[productID];
-
+  const product = data[productID - 1];
 
   const addToCart = () => {
     props.history.push(`/cart/${productID}?qty=${qty}`);
